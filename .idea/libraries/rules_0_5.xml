@@ -3,6 +3,7 @@
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/adstitle/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/annotations.zip!/" />
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/dropdownbox/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/annotations.zip!/" />
       <root url="jar://$PROJECT_DIR$/propertyanimation/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/annotations.zip!/" />
       <root url="jar://$PROJECT_DIR$/youkumenu/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/annotations.zip!/" />
     </ANNOTATIONS>
@@ -12,6 +13,8 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://D:/Android/android-sdk-windows/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
+      <root url="jar://D:/Android/android-sdk-windows/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
       <root url="jar://D:/Android/android-sdk-windows/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
       <root url="jar://D:/Android/android-sdk-windows/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
       <root url="jar://D:/Android/android-sdk-windows/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
