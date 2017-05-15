@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTextView">
+        <attr name="my_name" format="string" />
+        <attr name="my_age" format="integer" />
+        <attr name="my_bg" format="reference|color" />
+        <attr name="my_sex">
+            <enum name="男" value="0" />
+            <enum name="女" value="1" />
+            <enum name="保密" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

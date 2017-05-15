@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/adstitle/adstitle.iml" filepath="$PROJECT_DIR$/adstitle/adstitle.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dropdownbox/dropdownbox.iml" filepath="$PROJECT_DIR$/dropdownbox/dropdownbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myviewattribute/myviewattribute.iml" filepath="$PROJECT_DIR$/myviewattribute/myviewattribute.iml" />
       <module fileurl="file://$PROJECT_DIR$/propertyanimation/propertyanimation.iml" filepath="$PROJECT_DIR$/propertyanimation/propertyanimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/togglebutton/togglebutton.iml" filepath="$PROJECT_DIR$/togglebutton/togglebutton.iml" />
       <module fileurl="file://$PROJECT_DIR$/youkumenu/youkumenu.iml" filepath="$PROJECT_DIR$/youkumenu/youkumenu.iml" />
