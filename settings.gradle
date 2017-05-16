@@ -1,1 +1,1 @@
-include ':app', ':youkumenu', ':propertyanimation', ':adstitle', ':dropdownbox', ':togglebutton', ':myviewattribute'
+include ':app', ':youkumenu', ':propertyanimation', ':adstitle', ':dropdownbox', ':togglebutton', ':myviewattribute', ':myviewpager', ':testviewgroup'
