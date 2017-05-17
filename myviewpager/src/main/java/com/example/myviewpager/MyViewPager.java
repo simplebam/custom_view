@@ -84,6 +84,10 @@ public class MyViewPager extends ViewGroup {
 
                 if (distanceX>distanceY && distanceX> DensityUtil.dip2px(mContext,5)) {
                     isIntercept=true;
+                } else {
+                    //解决第三个自定义View的斜着划出现的bug,当目前还是有点小瑕疵
+                    //斜着划出现的bug还是没有很好的解决
+                    scrollToPager(currentIndex);
                 }
                 break;
             case MotionEvent.ACTION_UP:
