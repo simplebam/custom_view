@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/slidingmenu/slidingmenu.iml" filepath="$PROJECT_DIR$/slidingmenu/slidingmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/testviewgroup/testviewgroup.iml" filepath="$PROJECT_DIR$/testviewgroup/testviewgroup.iml" />
       <module fileurl="file://$PROJECT_DIR$/togglebutton/togglebutton.iml" filepath="$PROJECT_DIR$/togglebutton/togglebutton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wave/wave.iml" filepath="$PROJECT_DIR$/wave/wave.iml" />
       <module fileurl="file://$PROJECT_DIR$/youkumenu/youkumenu.iml" filepath="$PROJECT_DIR$/youkumenu/youkumenu.iml" />
     </modules>
   </component>
