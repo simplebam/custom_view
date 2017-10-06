@@ -1,0 +1,165 @@
+/**
+ * 
+ * scrollTo与scrollBy用法以及TouchSlop与VelocityTracker解析 - zejian的博客 - CSDN博客 
+ * http://blog.csdn.net/javazejian/article/details/50549962
+ *
+ * scroller类的用法完全解析以及带源码分析 - zejian的博客 - CSDN博客 
+ * http://blog.csdn.net/javazejian/article/details/50556525
+
+ * Android Scroller完全解析，关于Scroller你所需知道的一切 - 郭霖的专栏 - CSDN博客 
+ * http://blog.csdn.net/guolin_blog/article/details/48719871
+ * 
+ */
+
+public class CustomView extends View {
+
+
+    private Paint paint1;
+    private Paint paint2;
+    private Scroller mScroller;
+
+    public CustomView(Context context) {
+        super(context);
+    }
+
+    public CustomView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        mScroller = new Scroller(context);
+        Log.i(TAG, "CustomView");
+    }
+
+    public CustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+
+    @Override
+    protected void onFinishInflate() {
+        Log.i(TAG, "onFinishInflate");
+        super.onFinishInflate();
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        Log.i(TAG, "onAttachedToWindow");
+        super.onAttachedToWindow();
+    }
+
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        Log.i(TAG, "onMeasure");
+        Log.i(TAG, getMeasuredWidth() + "-------111111111111");
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        Log.i(TAG, getMeasuredWidth() + "-------222222222222");
+
+    }
+
+    @Override
+    public void layout(@Px int l, @Px int t, @Px int r, @Px int b) {
+        Log.i(TAG, "layout");
+        super.layout(l, t, r, b);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        Log.i(TAG, "onLayout");
+        super.onLayout(changed, left, top, right, bottom);
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        Log.i(TAG, "dispatchDraw");
+        super.dispatchDraw(canvas);
+    }
+
+    @Override
+    public void draw(Canvas canvas) {
+        Log.i(TAG, "draw");
+        super.draw(canvas);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        Log.i(TAG, "onDraw");
+        super.onDraw(canvas);
+
+        //实例化画笔
+        paint1 = new Paint();
+        //给画笔1设置颜色
+        paint1.setColor(getResources()
+                .getColor(android.R.color.holo_blue_light));
+        //给画笔1设置Style
+        paint1.setStyle(Paint.Style.FILL);
+
+        //实例化画笔
+        paint2 = new Paint();
+        //给画笔2设置颜色
+        paint2.setColor(Color.YELLOW);
+        //给画笔2设置Style
+        paint2.setStyle(Paint.Style.FILL_AND_STROKE);
+
+        //绘制外层矩形
+        canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), paint1);
+        //绘制内层矩形
+        canvas.drawRect(10, 10, getMeasuredWidth() - 10, getMeasuredHeight() - 10, paint2);
+
+    }
+
+    @Override
+    public void computeScroll() {
+        super.computeScroll();
+        Log.i(TAG, "computeScroll");
+        if (mScroller != null && mScroller.computeScrollOffset()) {
+            ((ViewGroup) getParent()).scrollBy(mScroller.getCurrX(), mScroller.getCurrY());
+            invalidate();
+        }
+
+    }
+
+
+    /**
+     * 调用这个方法可以实现移动(外部调用一下即可)
+     */
+    public void smoothScrollTo(int destX, int destY) {
+        int scrollX = destX - getScrollX();
+        int scrollY = destY - getScrollY();
+        mScroller.startScroll(getScrollX(), getScrollY(), scrollX, scrollY, 2000);
+        invalidate();
+    }
+
+    private int lastX;
+    private int lastY;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                lastX = x;
+                lastY = y;
+                break;
+            case MotionEvent.ACTION_MOVE:
+                int currX = x;
+                int currY = y;
+                int scrollX = currX - lastX;
+                int scrollY = currY - lastY;
+                // ((ViewGroup) getParent()).scrollBy(-scrollX, -scrollY);
+                // offsetLeftAndRight(scrollX);
+                // offsetTopAndBottom(scrollY);
+                layout(getLeft() + scrollX, getTop() + scrollY, getRight() + scrollX, getBottom() + scrollY);
+
+                break;
+            case MotionEvent.ACTION_UP:
+                break;
+            default:
+                break;
+        }
+
+
+        return true;
+
+    }
+
+}
