@@ -1,14 +1,31 @@
+package com.example.yueyue.myapplication.widgte;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.support.annotation.Nullable;
+import android.support.annotation.Px;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Scroller;
+
+import static android.content.ContentValues.TAG;
+
 /**
- * 
- * scrollTo与scrollBy用法以及TouchSlop与VelocityTracker解析 - zejian的博客 - CSDN博客 
+ *
+ * scrollTo与scrollBy用法以及TouchSlop与VelocityTracker解析 - zejian的博客 - CSDN博客
  * http://blog.csdn.net/javazejian/article/details/50549962
  *
- * scroller类的用法完全解析以及带源码分析 - zejian的博客 - CSDN博客 
+ * scroller类的用法完全解析以及带源码分析 - zejian的博客 - CSDN博客
  * http://blog.csdn.net/javazejian/article/details/50556525
 
- * Android Scroller完全解析，关于Scroller你所需知道的一切 - 郭霖的专栏 - CSDN博客 
+ * Android Scroller完全解析，关于Scroller你所需知道的一切 - 郭霖的专栏 - CSDN博客
  * http://blog.csdn.net/guolin_blog/article/details/48719871
- * 
+ *
  */
 
 public class CustomView extends View {
